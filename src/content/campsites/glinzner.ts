@@ -1,158 +1,179 @@
 import type { CampsiteConfig } from "../types";
 
-/**
- * Hotel Fischerhof Glinzner *** — Afritz am See, Kärnten.
- * Alle Texte/Fakten belegt aus glinzner.at (Stand-Scrape 2026-06) — Quellzitate
- * je Preis/Kernfakt in REPORT.md.
- * Bilder: Eigenaufnahmen des Fischerhof Glinzner (Drohne, Unterkünfte, Camping,
- * Restaurant) in /public/campsites/glinzner/. Die Aktivitäten-Sektion zeigt die
- * Regions-/Aktivitätsfotos (Kärnten-Werbung), die der Betrieb auf glinzner.at
- * SELBST verwendet — ehrlich als Region/Aktivität ausgewiesen, nie als der Platz.
- * EHRLICH: Quelle sagt wörtlich "liegt direkt am wunderschönen Afritzer See" → see belegt.
- * Hotel-Zimmerpreise sind auf der Website nicht beziffert → Zimmer ohne priceFrom.
- */
 const IMG = "/campsites/glinzner";
 
-export const glinzner: CampsiteConfig = {
-  name: "Hotel Fischerhof Glinzner",
-  shortName: "Fischerhof Glinzner",
+const glinzner: CampsiteConfig = {
+  name: "Fischerhof Glinzner",
+  shortName: "Glinzner",
   slug: "glinzner",
   ort: "Afritz am See",
   region: "Kärnten",
-  brandKind: "Hotel · Restaurant · Camping",
+  brandKind: "Hotel & Camping",
   see: "Afritzer See",
   regionLong: "Afritzer See · Kärnten · Österreich",
 
-  claim: "Erleben Sie die Natur hautnah – direkt am Afritzer See",
-  claimEmphasis: "direkt am Afritzer See",
-  intro:
-    "Drei-Sterne-Hotel, Seerestaurant und ein weitläufiger Campingplatz — der Fischerhof Glinzner liegt direkt am wunderschönen Afritzer See in Kärnten.",
+  heroVariant: "center",
 
-  logo: { src: `${IMG}/logo-glinzner.png`, alt: "Hotel Fischerhof Glinzner Logo" },
+  claim: "Dein Sommer direkt am Afritzer See",
+  claimEmphasis: "am Afritzer See",
+  emailDetail: "eure Lage direkt am Ufer des Afritzer Sees",
+  intro:
+    "Stellplätze am Wasser, Campingfässer aus Fichtenholz und Seelodgen mit eigener Terrasse — beim Fischerhof Glinzner campst du direkt am Ufer des Afritzer Sees, mit fangfrischem Fisch aus der eigenen Küche.",
+
+  logo: { src: `${IMG}/logo-0f2070b460.png`, alt: "Fischerhof Glinzner Logo" },
 
   statement: {
-    text: "Hotel, Restaurant und Camping an einem Ort — bei uns erleben Sie die Natur hautnah am Afritzer See.",
-    emphasis: "die Natur hautnah",
+    text: "Hier beginnt der Afritzer See gleich hinter deinem Stellplatz.",
+    emphasis: "hinter deinem Stellplatz",
   },
 
   pillars: [
-    { title: "Direkt am Afritzer See", text: "Hotel, Lodges und Stellplätze liegen unmittelbar am Ufer — mit Blick auf See und die umliegende Berglandschaft.", image: { src: `${IMG}/luft-see.webp`, alt: "Luftaufnahme des Fischerhof Glinzner am Ufer des Afritzer Sees" } },
-    { title: "Hotel, Lodges & Camping", text: "Vom Drei-Sterne-Hotelzimmer über See-Lodges und Campingfässer bis zum eigenen Stellplatz — alles an einem Platz am See.", image: { src: `${IMG}/seeufer-lodges.webp`, alt: "Lodges und Hütten am Seeufer des Afritzer Sees" } },
-    { title: "Restaurant mit Seeterrasse", text: "Regionale Küche und fangfrischer Fisch auf der Seeterrasse und in der Bikerlounge in sonniger Lage.", image: { src: `${IMG}/seeterrasse.webp`, alt: "Seeterrasse des Restaurants am Fischerhof Glinzner" } },
+    {
+      title: "Mitten am Afritzer See",
+      text: "Der Platz liegt direkt am Ufer — mit eigenem Badestrand und freiem Zugang zum klaren, als Trinkwasser eingestuften Afritzer See.",
+      image: { src: `${IMG}/hero-27d906d39d.webp`, alt: "Luftaufnahme des Campingplatzes am Fischerhof Glinzner am Afritzer See" },
+    },
+    {
+      title: "Schlafen im Fichtenholz-Fass",
+      text: "Minimalistisch, urig und reizend: Übernachte in einem aus Fichtenholz gezimmerten Campingfass am Ufer — das Raumklima wirst du lieben.",
+      image: { src: `${IMG}/gallery-f83356fd0d.webp`, alt: "Campingfass aus Fichtenholz am Fischerhof Glinzner" },
+    },
+    {
+      title: "Fangfrische Küche am See",
+      text: "Im Restaurant mit Seeterrasse und Bikerlounge kommen regionale Kärntner Köstlichkeiten und fangfrischer Fisch auf den Teller.",
+      image: { src: `${IMG}/gallery-05f625bbd8.webp`, alt: "Seeterrasse des Restaurants im Fischerhof Glinzner" },
+    },
   ],
 
   usps: [
-    "Eigener Badestrand & freier Seezugang",
-    "Kostenloses WLAN am Platz",
-    "Kostenlose Warmwasser-Duschen",
-    "Bettwäsche & Handtücher in Lodges/Hütten",
     "Direkt am Afritzer See",
-    "Drei-Sterne-Hotel ***",
-    "Restaurant mit Seeterrasse & Bikerlounge",
-    "Fischen seit drei Generationen",
+    "Eigener Badestrand",
+    "Campingfässer & Seelodgen",
+    "Restaurant mit Seeterrasse",
+    "Angeln am See",
+    "Hunde willkommen",
   ],
 
   trust: {
-    heading: "Worauf Sie sich am Fischerhof Glinzner verlassen können",
-    headingEmphasis: "verlassen",
+    heading: "Warum du am Afritzer See bleibst",
+    headingEmphasis: "am Afritzer See",
     intro:
-      "Familiär geführt von Familie Glinzner — Vater Gerald und Sohn Dorian am Herd —, mit ausgezeichneter Küche (Restaurant Guru 2024), regionalen Produkten und einer Traumlage direkt am Afritzer See.",
+      "Familiär geführt, mitten in der Kärntner Berg- und Seenlandschaft: Der eigene Badestrand reicht bis vor den Stellplatz, das Restaurant kocht mit Fisch aus der Region, und Wandern, Biken und Baden liegen direkt vor der Tür.",
   },
 
-  // Real, klar belegte Auszeichnung auf der Restaurant-Seite (kein Award-Bild im Scrape → nur Label).
-  awards: [
-    { label: "Restaurant Guru 2024 · Best Restaurant" },
-  ],
-
-  // Website nennt keine fixen Camping-Saisondaten; Quelle beschreibt Sommer- UND
-  // Winterangebot am Fischerhof (Baden, Eislaufen, Eisstockschießen) → ganzjährig.
-  saison: { von: "Ganzjährig", bis: "geöffnet" },
+  awards: [{ label: "Restaurant Guru 2024" }],
 
   hero: {
-    aerial: { src: `${IMG}/hero-luftaufnahme.webp`, alt: "Luftaufnahme des Fischerhof Glinzner direkt am Afritzer See mit Hotel, Lodges und Campingplatz" },
+    aerial: { src: `${IMG}/gallery-6b2c85aa1a.webp`, alt: "Luftaufnahme: Fischerhof Glinzner direkt am Afritzer See" },
   },
 
   camping: {
-    heading: "Camping direkt am Afritzer See",
+    heading: "Camping am Afritzer See",
     intro:
-      "Mit eigenem Badestrand und direktem Seezugang: naturbelassene Stellplätze, moderne (auch behindertengerechte) Sanitäranlagen, kostenlose Warmwasser-Duschen und WLAN — und Platz für Schwimmen, Surfen, Fischen oder Bootfahren mitten in der Natur.",
+      "Vom Stellplatz für Zelt und Wohnwagen bis zur Liegewiese am Wasser — hier ist der See immer nur ein paar Schritte entfernt.",
     features: [
-      { title: "Camping direkt am Ufer", text: "Stellplätze und Mietunterkünfte liegen unmittelbar am Afritzer See — mit eigenem Badestrand und direktem Zugang zum Wasser.", image: { src: `${IMG}/camping-am-see.webp`, alt: "Stellplatz mit Wohnwagen direkt am Afritzer See" } },
-      { title: "Naturbelassene Stellplätze", text: "Ebene, naturbelassene Plätze für Wohnwagen, Wohnmobil und Zelt — die perfekte Symbiose aus Naturverbundenheit und zeitgemäßem Komfort.", image: { src: `${IMG}/stellplatz-wiese.webp`, alt: "Naturbelassener Camping-Stellplatz auf der Wiese am See" } },
-      { title: "Eigener Badestrand", text: "Freie Strandbenützung und direkter Seezugang — Schwimmen, Surfen und Bootfahren direkt vom Platz aus.", image: { src: `${IMG}/badezugang-see.webp`, alt: "Seezugang am Ufer des Afritzer Sees" } },
-      { title: "Seeterrasse & Bikerlounge", text: "Das Restaurant mit Seeterrasse und Bikerlounge verwöhnt Camping-, Hotel- und Tagesgäste in sonniger Lage.", image: { src: `${IMG}/seeterrasse-bikerlounge.webp`, alt: "Sonnige Seeterrasse des Restaurants am Fischerhof Glinzner" } },
-      { title: "Idylle am Wasser", text: "Gepflegte Anlage mit liebevollen Details, ruhig eingebettet zwischen See, Wiesen und Kärntner Bergwelt.", image: { src: `${IMG}/idylle-detail.webp`, alt: "Idyllisches Detail am Fischerhof Glinzner" } },
-      { title: "Seeblick ringsum", text: "Wohin man blickt: der naturbelassene Afritzer See mit Trinkwasserqualität und die umliegenden Berge.", image: { src: `${IMG}/seeblick.webp`, alt: "Blick auf den Afritzer See vom Fischerhof Glinzner" } },
+      {
+        title: "Stellplätze direkt am Ufer",
+        text: "Naturbelassene Stellplätze für Zelt und Wohnwagen, dazu moderne, behindertengerechte Sanitäranlagen, kostenloses WLAN und Warmwasserduschen.",
+        image: { src: `${IMG}/gallery-8e407ce2c3.webp`, alt: "Stellplatz mit Wohnwagen am Ufer des Afritzer Sees" },
+      },
+      {
+        title: "Eigener Seezugang & Liegewiese",
+        text: "Freie Strandbenützung inklusive: Die Liegewiese reicht bis ans Wasser, Schwimmen, Surfen und Bootfahren starten direkt am Platz.",
+        image: { src: `${IMG}/gallery-8eb8ea1e63.webp`, alt: "Luftaufnahme der grünen Liegewiese am Seeufer des Fischerhof Glinzner" },
+      },
+      {
+        title: "Angeln am Hausgewässer",
+        text: "Der Afritzer See ist ein artenreiches Landschaftsschutzgebiet mit 15 Fischarten — perfekt, um die Angel direkt vom Platz auszuwerfen.",
+        image: { src: `${IMG}/gallery-df204798f9.webp`, alt: "Angler am Ufer des Afritzer Sees" },
+      },
+      {
+        title: "Einfach ankommen & durchatmen",
+        text: "Ein Platz im Liegestuhl, der Blick übers Wasser zu den Bergen — mehr braucht ein guter Campingtag am Afritzer See nicht.",
+        image: { src: `${IMG}/gallery-2b6248d7eb.webp`, alt: "Gast entspannt mit Seeblick am Fischerhof Glinzner" },
+      },
+      {
+        title: "Familien willkommen",
+        text: "Flacher Seezugang, viel Wiese zum Spielen und Grillen mit Genehmigung machen den Platz zum entspannten Ziel für den Familienurlaub.",
+        image: { src: `${IMG}/kids-4dc2754e9d.webp`, alt: "Familie am Campingplatz am Afritzer See" },
+      },
+      {
+        title: "Seeblick, wohin du schaust",
+        text: "Ob von der Terrasse, vom Stellplatz oder vom Steg — der Afritzer See und die Mirnock-Bergkulisse sind immer im Bild.",
+        image: { src: `${IMG}/gallery-ce49d5bcd3.webp`, alt: "Blick auf den Afritzer See von der Terrasse" },
+      },
     ],
   },
 
   mobilheime: {
-    heading: "Hotel, Lodges & Mietunterkünfte",
+    heading: "Komfort-Unterkünfte am See",
     intro:
-      "Vom Drei-Sterne-Hotelzimmer mit Balkon über See-Lodges und urige Campingfässer bis zum modernen Mobilheim — komfortabel wohnen direkt am Afritzer See.",
+      "Kein eigenes Zelt? Kein Problem. Seelodgen, Mobilheime, Fischerhütten und Campingfässer bieten dir das Camping-Gefühl mit festem Dach über dem Kopf.",
     items: [
-      { name: "Komfortzimmer", kind: "Hotel ***", text: "Stilvolles Interieur, moderne Annehmlichkeiten und ein entspannendes Ambiente — mit Balkon und Blick auf See und Berge. Reichhaltiges Frühstücksbuffet inklusive.", image: { src: `${IMG}/komfortzimmer.webp`, alt: "Modernes Komfortzimmer im Hotel Fischerhof Glinzner" }, features: ["Hotelzimmer", "Balkon", "Frühstück inkl."] },
-      { name: "Familienzimmer", kind: "Hotel ***", text: "Geräumig, modern und mit schönem Ausblick — das Familienzimmer bietet Platz für die ganze Familie. Frühstücksbuffet inklusive.", image: { src: `${IMG}/familienzimmer.webp`, alt: "Helles Familienzimmer im Hotel Fischerhof Glinzner" }, features: ["für die Familie", "modern", "Frühstück inkl."] },
-      { name: "Seelodge", kind: "Direkt am See", text: "Drei modern eingerichtete See-Lodges mit Küchenblock, SAT-TV und eigener Terrasse — Platz für bis zu 4 Personen in 2 Schlafzimmern. Bettwäsche & Handtücher inklusive.", image: { src: `${IMG}/seelodge.webp`, alt: "Wohnbereich einer See-Lodge am Fischerhof Glinzner" }, priceFrom: 130, features: ["bis 4 Personen", "ca. 20 m²", "eigene Terrasse"] },
-      { name: "Fischerhütte Seeblick", kind: "Fischerhütte", text: "Rustikaler Charme mit Blick auf den Mirnock: gemütliche Hütte für bis zu 4 Personen mit Sitzecke, Kühlschrank und großzügiger Seeterrasse.", image: { src: `${IMG}/fischerhuette.webp`, alt: "Gemütliche Fischerhütte mit Stockbetten am Fischerhof Glinzner" }, priceFrom: 100, features: ["bis 4 Personen", "Seeterrasse", "Heizung"] },
-      { name: "Campingfass", kind: "Campingfass", text: "Schlafen im Fichtenholz-Fass: minimalistisch, urig und reizend, mit Doppelbett, kleinem Kühlschrank und eigener Terrasse mit Sonnenschirm am Seeufer.", image: { src: `${IMG}/campingfass.webp`, alt: "Campingfass aus Fichtenholz am Ufer des Afritzer Sees" }, priceFrom: 90, features: ["2 Personen", "100 % Holz", "Terrasse"] },
-      { name: "Mobile Home", kind: "Mobilheim", text: "Ferienhaus-Komfort am Campingplatz: mehrere Schlafzimmer, voll ausgestattete Küche, eigenes Bad und überdachte Terrasse. Buchung über Gebetsroither.", image: { src: `${IMG}/mobilheim.webp`, alt: "Modernes Mobilheim mit überdachter Terrasse am Fischerhof Glinzner" }, priceFrom: 130, features: ["mehrere Schlafzimmer", "eigene Küche & Bad", "Terrasse"] },
-    ],
-  },
-
-  aktivitaeten: {
-    heading: "Aktiv am Afritzer See",
-    intro:
-      "Baden im kristallklaren Afritzer See, Fischen seit drei Generationen, Tennis nebenan und Touren in die Kärntner Bergwelt — im Winter Eislaufen am See und Skifahren ganz in der Nähe.",
-    items: [
-      { title: "Fischen", text: "Seit drei Generationen Fangsport am Afritzer See: Hechte, Zander und Karpfen, mit Tipps für Profis wie Anfänger.", image: { src: `${IMG}/aktiv-fischen.webp`, alt: "Frisch gefangener Fisch — Angeln am Afritzer See" } },
-      { title: "Tennis", text: "Ein Tennisplatz direkt neben dem Fischerhof — Reservierung und Training über den Tennisclub Afritzer See.", image: { src: `${IMG}/aktiv-tennis.webp`, alt: "Tennis spielen in Kärnten" } },
-      { title: "Radfahren & E-Bike", text: "Lake-Bike-Trails und Touren rund um die Seen — mit E-Bike-Box-Verleih für entspannte Ausfahrten.", image: { src: `${IMG}/aktiv-radfahren.webp`, alt: "Radfahren mit Seeblick in der Region Kärnten" } },
-      { title: "Motorrad & Biker", text: "Traumstraßen durch die Landschaften Kärntens — mit Bikerlounge und eigenen Stellplätzen für Motorradfahrer.", image: { src: `${IMG}/aktiv-motorrad.webp`, alt: "Motorradtour durch die Berglandschaft Kärntens" } },
-      { title: "Pumptrack", text: "Der Pumptrack in Afritz am See ist der ultimative Ort für alle Fahrradbegeisterten, um ihre Fähigkeiten zu verbessern.", image: { src: `${IMG}/aktiv-pumptrack.webp`, alt: "Pumptrack in Afritz am See" } },
-      { title: "Ausflugsziele", text: "Mit der Kärnten Card freier Eintritt in viele Urlaubsziele — von Wildparks und Schiffsfahrten bis zu Aussichtstürmen.", image: { src: `${IMG}/aktiv-ausflugsziele.webp`, alt: "Aussichtsturm und Ausflugsziele in der Region Kärnten" } },
+      {
+        name: "Seelodgen",
+        kind: "Direkt am See · bis 4 Personen",
+        text: "Drei modern eingerichtete Lodges direkt am Ufer, mit Küchenblock, eigener Terrasse und zwei Schlafzimmern für bis zu vier Personen. Bettwäsche und Handtücher inklusive.",
+        image: { src: `${IMG}/gallery-f14829316d.webp`, alt: "Wohnraum einer Seelodge am Fischerhof Glinzner" },
+        priceFrom: 130,
+        features: ["ca. 20 m²", "2 Schlafzimmer", "Küche & SAT-TV", "Eigene Terrasse", "Heizung"],
+      },
+      {
+        name: "Mobile Homes",
+        kind: "Ferienhaus · mit Terrasse",
+        text: "Ein kleines Ferienhäuschen mit voll ausgestatteter Küche, eigenem Bad und überdachter Terrasse — teils sogar mit eigenem Whirlpool und Blick auf See und Berge.",
+        image: { src: `${IMG}/gallery-4b5f5598a0.webp`, alt: "Mobile Home mit überdachter Terrasse und Whirlpool mit Seeblick" },
+        priceFrom: 130,
+        features: ["Mehrere Schlafzimmer", "Küche mit Geschirrspüler", "Eigenes Bad & WC", "Überdachte Terrasse"],
+      },
+      {
+        name: "Fischerhütte Seeblick",
+        kind: "Rustikal · bis 4 Personen",
+        text: "Rustikaler Charme mit großzügiger Seeterrasse: Die Fischerhütte bietet Platz für bis zu vier Personen und den Blick auf den Mirnock — ideal für Angler, Biker und Familien.",
+        image: { src: `${IMG}/gallery-ed3cf7c2bc.webp`, alt: "Gemütliche Fischerhütte mit Stockbetten am Fischerhof Glinzner" },
+        priceFrom: 100,
+        features: ["Bis 4 Personen", "Großzügige Seeterrasse", "Sitzecke & Kühlschrank", "Heizung", "Bettwäsche inkl."],
+      },
     ],
   },
 
   anreise: {
-    heading: "So finden Sie uns",
+    heading: "Dein Weg nach Afritz",
     modes: [
-      { title: "Mit dem Auto", text: "Über die A10 Tauernautobahn bzw. via Villach ins Gegendtal nach Afritz am See — Seestraße 28, direkt am Afritzer See." },
-      { title: "Mit dem Flugzeug", text: "Flughafen Klagenfurt (KLU) in rund einer Stunde Fahrt erreichbar." },
-      { title: "Mit Bahn & Bus", text: "Bahnhof Villach Hauptbahnhof, weiter mit Bus oder Transfer nach Afritz am See." },
+      { title: "Mit dem Auto", text: "Über die A10 Tauernautobahn bis Villach, dann Richtung Afritz am See — der Fischerhof liegt an der Seestraße direkt am Ufer." },
+      { title: "Mit der Bahn", text: "Nächster Fernverkehrsknoten ist der Bahnhof Villach, von dort weiter mit Bus oder Taxi nach Afritz am See." },
+      { title: "Mit dem Flugzeug", text: "Der Flughafen Klagenfurt ist rund 45 Minuten entfernt; auch Salzburg ist über die Tauernautobahn gut erreichbar." },
     ],
   },
 
   galerie: {
-    heading: "Ein Platz am Wasser",
-    headingEmphasis: "am Wasser",
-    intro:
-      "Sonnige Tage am Afritzer See, komfortable Unterkünfte und ein Hof zum Wohlfühlen — ein paar Eindrücke vom Fischerhof Glinzner.",
-    tag: "Afritzer See · Kärnten",
+    heading: "Sommertage am Afritzer See",
+    headingEmphasis: "Afritzer See",
+    intro: "Holz, Wasser und Bergblick — ein paar Eindrücke von Unterkünften und Plätzen am Fischerhof.",
+    tag: "Afritz am See · Kärnten",
+    moreCount: 20,
     images: [
-      { src: `${IMG}/galerie-terrasse-whirlpool.webp`, alt: "Überdachte Mobilheim-Terrasse mit Whirlpool und Blick auf den Afritzer See" },
-      { src: `${IMG}/galerie-entspannen-see.webp`, alt: "Entspannen mit Blick auf den Afritzer See" },
-      { src: `${IMG}/galerie-mobilheim-innen.webp`, alt: "Modern eingerichtetes Mobilheim mit Seeblick" },
-      { src: `${IMG}/galerie-fischerhuette-mirnock.webp`, alt: "Gemütliche Fischerhütte mit Blick auf den Mirnock" },
+      { src: `${IMG}/gallery-73560bb9e7.webp`, alt: "Modernes Mobile Home mit überdachter Terrasse" },
+      { src: `${IMG}/gallery-50bda305e0.webp`, alt: "Wohn- und Küchenbereich eines Mobile Homes" },
+      { src: `${IMG}/gallery-13e0090c86.webp`, alt: "Rustikale Fischerhütte mit Stockbetten" },
+      { src: `${IMG}/gallery-0f6da3d0fe.webp`, alt: "Fischerhof Glinzner mit österreichischer und Kärntner Fahne am See" },
     ],
   },
 
   booking: {
-    heading: "Verfügbarkeit & Anfrage",
+    heading: "Sichere dir deinen Platz am Ufer",
+    headingEmphasis: "am Ufer",
     intro:
-      "Wählen Sie Zeitraum, Unterkunft und Personen — wir melden uns mit Ihrer persönlichen Verfügbarkeit. Mobile Homes werden über Gebetsroither gebucht.",
+      "Wähle Unterkunft, Zeitraum und Personenzahl — die Familie Glinzner meldet sich persönlich mit deiner Verfügbarkeit. Mobile Homes werden über Gebetsroither gebucht.",
     pricesArePlaceholder: false,
-    priceNote: "Richtpreise lt. glinzner.at · zzgl. Ortstaxe € 2,70/Person · Hund € 8/Tag · Endreinigung bei Lodge/Hütte",
-    highlight: {
-      title: "Direkt am Afritzer See",
-      text: "Eigener Badestrand, Seezugang und Restaurant mit Seeterrasse — mitten in der Kärntner Natur.",
-    },
+    priceNote: "ab-Preise pro Nacht · zzgl. Ortstaxe € 2,70 p. P. · Hund € 8 / Tag · Preisänderungen vorbehalten",
+    highlight: { title: "Direkt am Ufer", text: "Vom Stellplatz sind es nur wenige Schritte bis ins Wasser." },
     categories: [
-      // Reale "ab"-Preise lt. glinzner.at: Camping Standard ab 13 €/Nacht,
-      // Campingfass ab 90 €/Nacht, Seelodge ab 130 €/Nacht.
-      { id: "stellplatz", label: "Stellplatz", perNight: 13, perExtraGuest: 0 },
-      { id: "campingfass", label: "Campingfass", perNight: 90, perExtraGuest: 0 },
-      { id: "seelodge", label: "Seelodge", perNight: 130, perExtraGuest: 0 },
+      { id: "stellplatz", label: "Stellplatz (Camping Standard)", perNight: 13 },
+      { id: "campingfass", label: "Campingfass", perNight: 90 },
+      { id: "fischerhuette", label: "Fischerhütte", perNight: 100 },
+      { id: "seelodge", label: "Seelodge", perNight: 130 },
+      { id: "mobilheim", label: "Mobile Home", perNight: 130 },
     ],
   },
 
@@ -161,74 +182,23 @@ export const glinzner: CampsiteConfig = {
     tel: "+43 4247 2133",
     telHref: "tel:+4342472133",
     mail: "info@glinzner.at",
-    facebook: "https://www.facebook.com/FischerhofGlinznerDirektInAfritzAmSee/?locale=de_DE",
+    facebook: "https://www.facebook.com/FischerhofGlinznerDirektInAfritzAmSee",
     adresse: "Seestraße 28 · 9542 Afritz am See · Kärnten",
-    // Keine Koordinaten auf der Quelle/im Scrape → coords ausgelassen (Karte aus, Adresse sichtbar).
   },
 
-  story: {
-    kicker: "Der Fischerhof",
-    heading: "Drei Generationen am Afritzer See",
-    intro:
-      "Vom Fangsport bis zur Küche — beim Fischerhof Glinzner wird Gastfreundschaft seit Generationen gelebt.",
-    chapters: [
-      { no: "01", kicker: "Die Tradition", title: "Seit drei Generationen am Wasser", text: "Seit drei Generationen pflegt die Familie Glinzner den Fangsport am Afritzer See — und gibt Tipps und Tricks an Profis wie Anfänger weiter." },
-      { no: "02", kicker: "Die Lage", title: "Direkt am Afritzer See", text: "Hotel, Restaurant und ein weitläufiger Campingplatz liegen unmittelbar am naturbelassenen See mit Trinkwasserqualität — umrahmt von der Kärntner Bergwelt." },
-      { no: "03", kicker: "Die Küche", title: "Vater und Sohn am Herd", text: "Wo früher Vater Gerald stand, zaubert heute Sohn Dorian gemeinsam mit ihm regionale Köstlichkeiten und fangfrischen Fisch — ausgezeichnet vom Restaurant Guru 2024." },
-      { no: "04", kicker: "Das Erlebnis", title: "Sommer wie Winter", text: "Baden, Fischen und Wandern im Sommer, Eislaufen am See und Skifahren in der Nähe im Winter — am Fischerhof Glinzner erleben Sie Kärnten das ganze Jahr." },
-    ],
-  },
-
-  languages: ["DE"],
+  languages: ["DE", "EN", "NL", "IT"],
 
   nav: [
-    {
-      label: "Hotel & Zimmer",
-      href: "#mobilheime",
-      children: [
-        { label: "Komfortzimmer", href: "#mobilheime" },
-        { label: "Familienzimmer", href: "#mobilheime" },
-        { label: "Frühstück", href: "#mobilheime" },
-      ],
-    },
-    {
-      label: "Camping",
-      href: "#camping",
-      children: [
-        { label: "Stellplätze", href: "#camping" },
-        { label: "Eigener Badestrand", href: "#camping" },
-        { label: "Seezugang", href: "#camping" },
-      ],
-    },
-    {
-      label: "Unterkünfte",
-      href: "#mobilheime",
-      children: [
-        { label: "Seelodgen", href: "#mobilheime" },
-        { label: "Fischerhütten", href: "#mobilheime" },
-        { label: "Campingfässer", href: "#mobilheime" },
-        { label: "Mobile Homes", href: "#mobilheime" },
-      ],
-    },
-    {
-      label: "Aktiv",
-      href: "#aktivitaeten",
-      children: [
-        { label: "Fischen", href: "#aktivitaeten" },
-        { label: "Tennis", href: "#aktivitaeten" },
-        { label: "Radfahren & E-Bike", href: "#aktivitaeten" },
-        { label: "Ausflugsziele", href: "#aktivitaeten" },
-      ],
-    },
-    {
-      label: "Preise & Lage",
-      href: "#booking",
-      children: [
-        { label: "Preise", href: "#booking" },
-        { label: "Anreise", href: "#anreise" },
-        { label: "Kontakt", href: "#anreise" },
-      ],
-    },
+    { label: "Camping", href: "#camping", children: [
+      { label: "Stellplätze", href: "#camping" },
+      { label: "Am See", href: "#camping" },
+    ]},
+    { label: "Unterkünfte", href: "#mobilheime" },
+    { label: "Galerie", href: "#galerie" },
+    { label: "Preise & Lage", href: "#booking", children: [
+      { label: "Preise", href: "#booking" },
+      { label: "Anreise", href: "#anreise" },
+    ]},
   ],
 };
 
